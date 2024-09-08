@@ -2,7 +2,7 @@ package com.SpringSecurityAuthantication.UserAndAdminAuthantication.dto;
 
 public class LoginDto {
 	
-	//public String username;
+	
 	public String email;
 	public String password;
 		
