@@ -17,18 +17,18 @@ import com.SpringSecurityAuthantication.UserAndAdminAuthantication.util.GenricRe
 
 
 
-//@Service class as a Spring service for automatic detection and registration.
+
 @Service
 public class UserServiceImpl implements UserService {
 	
 	  @Autowired
 	    private UserRepository userRepository;
-	    // Automatically injects an instance of UserRepositry into this class
+	   
 
 	 
 	    @Override
 	    public ResponseEntity<?> addUserDetails(User user) {
-	        // Implements the addUserDetails method from the LoginServices interface
+	       
 	    	
 	    	Authentication authenticationToken = SecurityContextHolder.getContext().getAuthentication();
 			String email1 = authenticationToken.getName();
@@ -87,7 +87,7 @@ public class UserServiceImpl implements UserService {
 	
 		@Override
 		public ResponseEntity<?> getUserDetails() {
-			// TODO Auto-generated method stub
+			
 			
 			Authentication authenticationToken = SecurityContextHolder.getContext().getAuthentication();
 			String email = authenticationToken.getName();
@@ -108,7 +108,7 @@ public class UserServiceImpl implements UserService {
 
 		@Override
 		public ResponseEntity<?> deleteUserDetails(String id,User user) {
-			// Check if the user exists
+			
 	        if (userRepository.existsById(id)) {
 	            userRepository.deleteById(id);
 	            return ResponseEntity.ok(new GenricResponse(200, "User deleted successfully", null));
