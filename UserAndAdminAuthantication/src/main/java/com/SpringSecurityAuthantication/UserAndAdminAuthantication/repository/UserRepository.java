@@ -9,9 +9,9 @@ import com.SpringSecurityAuthantication.UserAndAdminAuthantication.pojo.User;
 
 
 
-//@Repository interface as a Spring-managed data access component.
+
 @Repository
-//UserReposiotry Interface for interacting with User entities
+
 public interface UserRepository extends MongoRepository<User, String> {
 	
 	User findByEmail(String username);
